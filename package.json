@@ -1,0 +1,25 @@
+{
+  "name": "ddd-clean-ignite",
+  "version": "1.0.0",
+  "description": "Design dirigido à dominio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oRafael07/ddd-clean-ignite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oRafael07/ddd-clean-ignite/issues"
+  },
+  "homepage": "https://github.com/oRafael07/ddd-clean-ignite#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
+  }
+}
