@@ -30,7 +30,7 @@ describe('Choose Question Best Answer', () => {
 
     await sut.execute({
       answerId: answer.id.toString(),
-      auhtorId: question.authorId.toString(),
+      authorId: question.authorId.toString(),
     })
 
     expect(inMemoryQuestionRepository.items[0].bestAnswerId).toEqual(answer.id)
@@ -50,7 +50,7 @@ describe('Choose Question Best Answer', () => {
     await expect(() =>
       sut.execute({
         answerId: answer.id.toString(),
-        auhtorId: 'author-2',
+        authorId: 'author-2',
       }),
     ).rejects.toBeInstanceOf(Error)
   })
