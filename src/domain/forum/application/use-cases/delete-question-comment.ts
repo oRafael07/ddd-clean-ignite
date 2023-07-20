@@ -1,4 +1,4 @@
-import { Either, right } from '@/core/either'
+import { Either, left, right } from '@/core/either'
 import { QuestionsCommentsRepository } from '../repositories/questions-comments-respository'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'
 import { NotAllowedError } from './errors/not-allowed-error'
@@ -29,7 +29,7 @@ export class DeleteQuestionCommentUseCase {
     if (!questionComment) return right(new ResourceNotFoundError())
 
     if (questionComment.authorId.toString() !== authorId)
-      return right(new NotAllowedError())
+      return left(new NotAllowedError())
 
     await this.questionsCommentsRepository.delete(questionComment)
 
