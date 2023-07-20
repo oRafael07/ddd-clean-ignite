@@ -1,4 +1,4 @@
-import { InMemoryAnswersRepository  } from 'test/repositories/in-memory-answer-respository'
+import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answer-respository'
 import { makeAnswer } from 'test/factories/make-answer'
 import { InMemoryAnswersCommentsRepository } from 'test/repositories/in-memory-answer-comments-repository'
 import { CommentOnAnswerUseCase } from './comment-on-answer'
@@ -10,8 +10,7 @@ let sut: CommentOnAnswerUseCase
 describe('Comment on Answer', () => {
   beforeEach(() => {
     inMemoryAnswerRepository = new InMemoryAnswersRepository()
-    inMemoryAnswerCommentsRepository =
-      new InMemoryAnswersCommentsRepository()
+    inMemoryAnswerCommentsRepository = new InMemoryAnswersCommentsRepository()
 
     sut = new CommentOnAnswerUseCase(
       inMemoryAnswerRepository,
